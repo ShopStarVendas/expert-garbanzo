@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastrear IP - Mr. Robot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Rastrear IP</h1>
+        <div class="ip-form">
+            <p>DIGITE O IP DO ALVO</p>
+            <form id="rastreamento-form">
+                <input type="text" id="ip" name="ip" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="resultado-rastreamento"></div>
+        </div>
+
+        <h2>RESULTADO</h2>
+        <div id="locationResult">
+            <!-- O resultado do rastreamento de IP será exibido aqui -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+    const form = document.getElementById('rastreamento-form');
+    const locationResult = document.getElementById('locationResult');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const ipAddress = document.getElementById('ip').value;
+        fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=c755d1019c20474188985aea7e114f34&ip=${ipAddress}`)
+            .then(response => response.json())
+            .then(data => {
+                locationResult.innerHTML = `
+                    <p>Country: ${data.country_name}</p>
+                    <p>City: ${data.city}</p>
+                    <p>ISP: ${data.isp}</p>
+                `;
+            })
+            .catch(error => {
+                locationResult.innerHTML = `<p>Error: ${error.message}</p>`;
+            });
+    });
+</script>
+
+</body>
+</html>

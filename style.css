@@ -1,0 +1,142 @@
+/* Estilos para o menu mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    height: 3px;
+    width: 255555px;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px; /* Adicione margem superior para mover os itens do menu para cima */
+}
+
+
+.menu li {
+    margin: 6px 0;
+    border: 5px solid #000;
+    border-radius: 10000px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    padding: 15px;
+}
+
+/* Estilos para o menu mobile quando aberto */
+.menu-open {
+    display: block;
+}
+
+/* Estilos para o logotipo "MR ROBOT" */
+.logo {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+/* Estilos para o container de texto aumentado */
+.texto-aumenta {
+    background-color: #FFFFFF;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 20px;
+    text-align: left;
+    margin: 20px auto;
+}
+
+/* Estilos para os botões arredondados */
+/* Estilos para os botões arredondados */
+.round-button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block; /* Adiciona a propriedade para alinhar os botões verticalmente */
+}
+
+/* Estilos para o container dos botões (centraliza verticalmente) */
+.buttons-container {
+    display: flex;
+    flex-direction: column; /* Organiza os botões verticalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    height: calc(10vh - 100px); /* Altura igual à altura da janela menos 200px */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 0px; /* Espaçamento superior para ajustar a posição */
+}
+/* iptracer */
+/* Estilos para o formulário de rastreamento de IP */
+.ip-form {
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 80%; /* Define a largura do formulário */
+    max-width: 400px; /* Define a largura máxima do formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px;
+    background: #000; /* Cor de fundo preto fosco */
+    background-image: url('ip.jpg'); /* Imagem de fundo */
+    background-size: cover; /* Cobrir todo o quadrado com a imagem */
+    background-position: center; /* Centralizar a imagem */
+    color: #FFF; /* Cor do texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Estilos para a área onde a pessoa insere o IP */
+.ip-form input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Aumenta o tamanho do campo de entrada */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    margin-top: 20px; /* Espaçamento superior maior */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para o botão de enviar */
+.ip-form button {
+    background-color: #4CAF50; /* Cor verde */
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px; /* Aumenta o tamanho do botão */
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px; /* Espaçamento superior maior */
+}
+
+
+
+/* respostas da consulta*/

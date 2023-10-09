@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,400");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Asap', 'Poppins', sans-serif;
+    text-shadow: #000 0 0 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+.item {
+    position: relative;
+    flex: calc(100vw / 6) 1 1;
+    background-size: cover;
+    overflow: hidden;
+    filter: saturate(90%);
+    transition: 1s;
+}
+
+.item:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(25deg, rgba(0,0,0,.9), rgba(0,0,0,0));
+}
+
+.item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    animation: borderPulse 5s infinite;
+
+    @media (min-width: 1024px) {
+        border-right: 1px solid #ccc;
+        border-bottom: none;
+    }
+}
+
+.item:hover {
+    flex-basis: 40%;
+    filter: saturate(120%);
+
+    @media (min-width: 1024px) {
+        flex-basis: 75%;
+    }
+
+    .quote {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.item:nth-child(1) {
+    background-image: url("https://cdn.wallpapersafari.com/41/38/ruKsD7.jpg");
+    background-position: 72% 35%;
+}
+
+.item:nth-child(2) {
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/340/7/602/spider-man-spider-man-far-from-home-tom-holland-hd-wallpaper 72% 35%;
+}
